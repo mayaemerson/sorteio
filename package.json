@@ -1,0 +1,19 @@
+{
+  "name": "projetsorteio",
+  "version": "1.0.0",
+  "description": "Sorteio utilizando planilhas googlesheets como bd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayaemerson/sorteio.git"
+  },
+  "author": "Emerson Maia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayaemerson/sorteio/issues"
+  },
+  "homepage": "https://github.com/mayaemerson/sorteio#readme"
+}

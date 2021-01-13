@@ -1,0 +1,29 @@
+<script>
+
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("embParticipantes").addEventListener("click", embaralhar)
+    document.getElementById("sortear").addEventListener("click", carregarganhador)
+  })
+
+
+  function embaralhar (carregarganhador){
+   const min = document.getElementById("minimo").value
+   const max = document.getElementById("maximo").value
+   const sort = Math.floor((Math.random() * max)+ min)
+
+      document.getElementById("resultado").innerHTML=sort;
+      
+    }
+    
+  function  carregarganhador(){
+    var rtganhador = document.getElementById("resultado").value
+    google.script.run.withSuccessHandler(retganhador).pesquisaretorno(rtganhador);
+  }
+
+  function retganhador(options){
+    var ganhadordopredmio = document.getElementById("ghador")
+    ganhadordopredmio.innerText = options.ganhadordopredmio
+    
+  }
+</script>
