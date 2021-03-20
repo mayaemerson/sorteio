@@ -1,13 +1,22 @@
 
 
-function pesquisaretorno(select){
-  wsretorno.getRange('A1').setValue(select)
-  var nomeganhador = wsretorno.getRange("B1").getValue()
-  return { ganhadordopredmio: nomeganhador }
 
+function numSortead(vlor){
+ const retsort = wspainel.getRange(2, 1, wspainel.getRange('A2').getDataRegion().getLastRow(), 1).getValues()
+  const valorminino =  vlor.min
+  const valormax = vlor.max
+  const sort = Math.floor((Math.random() * valormax )+ valorminino)
+   const result = retsort.pSort(sort)
+   const Linha = result + 2
+     if(result != 1){
+       const nomeganhador = wspainel.getRange(Linha, 3).getValue()
+
+      Logger.log( nomeganhador)
+
+      var success = "success"
+       return { nomeganhador:nomeganhador, success: success }
+     }
+  
  }
-//  function MATCH() {
-//   var spreadsheet = SpreadsheetApp.getActive();
-//   spreadsheet.getRange('E1').activate();
-//   spreadsheet.getCurrentCell().setFormula('=IFERROR(IF(retorno_web!A1="";"";index(PAINEL!C2:C;MATCH(A1;PAINEL!A1:A;0))))');
-// };
+
+ 

@@ -1,29 +1,30 @@
 <script>
 
+document.addEventListener("DOMContentLoaded", function () {
   
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("embParticipantes").addEventListener("click", embaralhar)
-    document.getElementById("sortear").addEventListener("click", carregarganhador)
+    document.getElementById("sortear").addEventListener("click",sortear)
+   
   })
+  
+  
+  function sortear (){
+$("#loading-barr").css("display","block")
+    var vlor = {};
+    vlor.min = document.getElementById("min").value
+    vlor.max = document.getElementById("max").value
+   
+google.script.run.withSuccessHandler(retsorteio).numSortead(vlor)
+   
+}
+ 
+function retsorteio(options){
+if(options.success = "success")
+
+document.getElementById("ganhador").innerText = options.nomeganhador
+$("#loading-barr").css("display","none")
+}
 
 
-  function embaralhar (carregarganhador){
-   const min = document.getElementById("minimo").value
-   const max = document.getElementById("maximo").value
-   const sort = Math.floor((Math.random() * max)+ min)
 
-      document.getElementById("resultado").innerHTML=sort;
-      
-    }
-    
-  function  carregarganhador(){
-    var rtganhador = document.getElementById("resultado").value
-    google.script.run.withSuccessHandler(retganhador).pesquisaretorno(rtganhador);
-  }
 
-  function retganhador(options){
-    var ganhadordopredmio = document.getElementById("ghador")
-    ganhadordopredmio.innerText = options.ganhadordopredmio
-    
-  }
 </script>

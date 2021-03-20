@@ -20,41 +20,56 @@
 
     <title>Sroteio Online!</title>
     <?!= include("main-css"); ?>
+    <?!= include("load-sort-css"); ?>
    </head>
   <body>
+
+    <div class="wrapper text-color-cinza" id="loading-barr">
+     
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <div class="shadow"></div>
+      <span>Sorteando...</span>
+  </div>
     
 <div class="st-page-wrapper">
+  <div class="form-group row  ">
+    <div class="input-group  col-lg-6 col-md-3">
   <h1 class="st-title-abril-fat st-text-light ">Sorteio Online!</h1>
-  <h1 class="st-text-light st-text-ct st-title-50 st-mar-top-90" id="datahora"><?= datahj ?></h1>
-  <br>
+  </div>
+  <div class="input-group  col-lg-6 col-md-3">
+  <h1 class="st-text-light st-text-ct st-title-50 st-mar-top-90" id="datahora"></h1>
+  </div>
+  </div>
+  
   <h1 class="st-text-light st-text-ct st-title-50 st-mar-top-90" id="tparticipantes"><?= totalparticipatnes ?></h1>
   <br>
-  <br><br>
   <div class="container">
      <div class="form-group row  ">
   <div class="input-group  col-lg-6 col-md-3">
-    <input type="number" id="minimo" class="form-control" placeholder="Entre com valor mínimo" id="minimo"  required>
+    <input type="number" id="min" class="form-control" placeholder="Entre com valor mínimo"  required>
     
     </div>
     <div class="input-group  col-lg-6 col-md-3">
-      <input type="number" id="maximo" class="form-control" placeholder="Entre com o valor máximo" id="maximo" required>
-     
-      </div>
+      <input type="number" id="max" class="form-control" placeholder="Entre com o valor máximo" required>
+     </div>
 </div>
-
 <br>
-<div class="form-group row  ">
-  <div class="input-group  col-lg-4 col-md-3">
-<button type="button" id="embParticipantes" class="btn btn-warning btn-lg btn-block">Embaralhar Participtantes</button>
-  </div>
-  <div class="input-group  col-lg-8 col-md-3">
+
+  <div class="input-group  col-lg-8 col-md-3 justify-content-center">
     <button type="button" id="sortear" class="btn btn-primary btn-lg btn-block">Sortear</button>
       </div>
+
+      <div class="row  ganhador-result ">
+        <div class="input-group  col-lg-12 col-md-3">
+      <h1 class="st-text-light mt-10 justify-content-center" id="ganhador"></h1>
+     </div>
   </div>
 
-</div>
-<h1 class="st-text-light st-text-ct st-title-50 st-mar-top-90" id="resultado"></h1>
-<h1 class="st-text-light st-text-ct st-title-50 st-mar-top-90" id="ghador"></h1>
+
   </div>
 
  

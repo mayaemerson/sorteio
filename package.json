@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mayaemerson/sorteio/issues"
   },
-  "homepage": "https://github.com/mayaemerson/sorteio#readme"
+  "homepage": "https://github.com/mayaemerson/sorteio#readme",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.20"
+  }
 }
