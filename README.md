@@ -1,2 +1,2 @@
 ## Sorteio
-# Apps script página web para sorteios, foi uma ajuda para um amigo.
+# Apps script clasp,  página web para sorteios, foi uma ajuda para um amigo.
